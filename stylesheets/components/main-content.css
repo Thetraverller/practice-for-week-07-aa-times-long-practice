@@ -1,1 +1,165 @@
 /* Your code here */
+main {
+    display: grid;
+    grid-template: 10% 20% 35% 2.5% 22.5% 10% / 30% 5% 35% 15% 15%;
+  }
+
+  .main-header {
+    grid-area: 1 / 1 / 2 / 4;
+  }
+
+  #main-article {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    grid-area: 2 / 1 / 4 / 2;
+  }
+
+  #video-article {
+    grid-area: 2 / 2 / 4 / 4;
+  }
+
+  #short-article {
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #e2e2e2;
+    border-top: 1px solid #000000;
+    grid-area: 4 / 1 / 6 / 2;
+  }
+
+  #long-article {
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
+    grid-area: 4 / 2 / 6 / 4;
+  }
+
+  #short-aside {
+    border-bottom: 1px solid #e2e2e2;
+    border-left: 1px solid #e2e2e2;
+    display: flex;
+    flex-flow: column wrap;
+    grid-area: 1 / 4 / 3 / 6;
+    justify-content: space-around;
+  }
+
+  #long-aside {
+    border-bottom: 1px solid #e2e2e2;
+    border-left: 1px solid #e2e2e2;
+    display: flex;
+    flex-flow: column wrap;
+    grid-area: 3 / 4 / 5 / 6;
+    justify-content: space-around;
+  }
+
+  #long-article-nav {
+    border-left: 1px solid #e2e2e2;
+    grid-area: 5 / 4 / 7 / 5;
+  }
+
+  #short-article-nav {
+    border-left: 1px solid #e2e2e2;
+    grid-area: 5 / 5 / 7 / 6;
+  }
+
+  .article,
+  .aside,
+  .article-nav {
+    padding: 0.5rem;
+  }
+
+  .main-header {
+    line-height: 2rem;
+  }
+
+  h3 {
+    font-size: 12px;
+    line-height: 1rem;
+  }
+
+  main header {
+    margin: 10px 1px;
+    padding: unset;
+  }
+
+  #main-article h2 {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .aside__header {
+    display: flex;
+    flex-flow: column wrap;
+    height: 5rem;
+    justify-content: space-between;
+  }
+
+  .aside h3,
+  .aside h4 {
+    margin: 0.5em 0;
+  }
+
+  .article__title,
+  .aside__title,
+  .aside__subtitle {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .article-nav__title {
+    font-weight: bold;
+  }
+
+  .big-text {
+    font-size: 22px;
+  }
+
+  .small-text {
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  .article-nav__author {
+    color: #999;
+  }
+
+  .article__byline,
+  .aside__byline {
+    color: #999;
+    font-weight: bold;
+  }
+
+  #main-article__list {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    list-style-type: disc;
+  }
+
+  .article-nav ul li{
+    border-bottom: 1px solid #e2e2e2;
+    padding-top: 0.5rem;
+  }
+
+  .comments {
+    color: #326891;
+  }
+
+  @media (width < 1200px) {
+    main {
+      grid-template: 10% 60% 30% / 45% 5% 50%;
+    }
+
+    #short-aside,
+    #long-aside,
+    .article-nav {
+      display: none
+    }
+  }
+
+  @media (width < 1000px) {
+    .interests-bar {
+      display: none
+    }
+  }
